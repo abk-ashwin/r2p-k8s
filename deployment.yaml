@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: my-app-deployment
 spec:
-  replicas: 2 # You have 4 nodes, so you can easily scale this up
+  replicas: 5 # You have 4 nodes, so you can easily scale this up
   selector:
     matchLabels:
       app: my-app
@@ -32,4 +32,5 @@ spec:
           matchLabels:
             app: my-app
         ports:
+
         - containerPort: 5000 # Change this to your app's internal port
